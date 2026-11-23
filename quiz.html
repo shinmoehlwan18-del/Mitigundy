@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MITIGUDY</title>
+  <link rel="icon" type="image/png" href="image/logo.png">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  >
+
+  <link rel="stylesheet" href="quiz.css">
+</head>
+
+
+<body>
+
+
+<!--NAVBAR-->
+
+<nav class="navbar navbar-expand-lg">
+
+  <div class="container">
+
+    <a href="index.html" class="navbar-brand">
+
+      <img src="image/logo.png" class="rounded-circle" alt="MITIGUDY Logo">
+      MITIGUDY
+    </a>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+
+          <a href="index.html" class="nav-link"> Home </a>
+
+        </li>
+
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="articles.html" id="articlesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Articles
+          </a>
+
+
+          <ul class="dropdown-menu" aria-labelledby="articlesDropdown">
+
+            <li>
+              <a class="dropdown-item" href="article1.html">
+                Flood safety
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="article2.html">
+                Community stories
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="article3.html">
+                Prevention Tips
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="articles.html">
+                All Articles
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+
+        <li class="nav-item">
+
+          <a href="Aboutus.html" class="nav-link">
+            About us
+          </a>
+
+        </li>
+
+
+        <li class="nav-item">
+
+          <a href="issue_and_solution.html" class="nav-link">
+            Issues &amp; Solutions
+          </a>
+
+        </li>
+
+
+        <li class="nav-item">
+
+          <a href="donate_page.html" class="nav-link">
+            Donate
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a href="quiz.html" class="nav-link">
+            Quiz
+          </a>
+
+        </li>
+
+      </ul>
+
+
+      <!-- Search -->
+
+      <form class="d-flex" role="search" action="#" method="get">
+
+        <input type="search" class="form-control me-2" name="search" placeholder="Search" aria-label="Search">
+
+        <button type="submit" class="btn btn-outline-primary" >
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<!-- QUIZ-->
+
+<div class="quiz-container">
+
+  <div class="container">
+
+
+    <h2>
+      Quiz: Prevention Tips in Flood Disaster
+    </h2>
+
+
+    <!-- Progress -->
+
+    <div
+      class="progress"
+      role="progressbar"
+      aria-label="Quiz progress score"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="45"
+    >
+
+      <div
+        id="myBar"
+        class="progress-bar"
+        style="width: 45%"
+      >
+        45%
+      </div>
+
+    </div>
+
+
+    <!-- Quiz Card -->
+
+    <section
+      id="quizArea"
+      aria-live="polite"
+    >
+
+      <h3 id="questionText"></h3>
+
+
+      <div id="choices"></div>
+
+
+      <p
+        id="feedback"
+        class="mt-3"
+      ></p>
+
+
+      <button
+        id="submitBtn"
+        type="button"
+        class="btn"
+      >
+        Check Answer
+      </button>
+
+
+      <button
+        id="nextBtn"
+        type="button"
+        class="btn"
+        hidden
+      >
+        Next Question
+      </button>
+
+    </section>
+
+  </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer-green">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-3 mb-5">
+            <div class="footer-logo mb-3">MITI<br>GUNDY</div>
+            <p class="fw-bold text-light mb-4">
+            “Understanding flood risks is the first step towards safety. By preparing early, following reliable warnings, and helping one another, we can protect lives and build safer communities across Myanmar.”
+            </p>
+            <div class="d-flex gap-2 socials">
+            <a href="#" class="social-box"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-box"><i class="bi bi-telegram"></i></a>
+            </div>
+        </div>
+    
+        <div class="col-lg-2 mb-5 col-md-12">
+            <span class="footer-header">Quick Links</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="issue_and_solution.html">The Issue</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 mb-5 col-md-12">
+            <span class="footer-header">References</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="https://www.moezala.gov.mm/">Department of Meteorology and Hydrology</a></li>
+            <li><a href="https://themimu.info/">Myanmar Information Management Unit</a></li>
+            <li><a href="https://www.ifrc.org/">International Federation of Red Cross</a></li>
+            <li><a href="https://www.undrr.org/">UN Office for Disaster Risk Reduction</a></li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-1 mb-5 col-md-12">
+            <span class="footer-header">About</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="Aboutus.html">About us</a></li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-3 mb-5 col-md-12">
+            <span class="footer-header">Get in Touch</span>
+            <ul class="list-unstyled footer-nav fw-bold">
+            <li><i class="bi bi-geo-alt-fill me-2 contact-icon"></i> No.47, Aung Chanthar street, Kamaryut Township, Yangon, Myanmar</li>
+            <li><i class="bi bi-telephone-fill me-2 contact-icon"></i>(+95) 987654321</li>
+            <li><i class="bi bi-envelope-fill me-2 contact-icon"></i>sushwesinhtet.envo@gmail.com</li>
+            </ul>
+        </div>
+        </div>
+    
+        <div class="row copyright-bar text-center d-flex justify-content-center">
+        <div class="col-md-6">MITIGUDY © 2026. All rights reserved.</div>
+        </div>
+    </div>
+    </footer>
+
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+
+<!-- QUIZ JAVASCRIPT-->
+
+<script>
+
+  const questions = [
+
+    {
+      question:
+        "What should you do when an official flood warning is issued?",
+
+      choices: [
+        "Ignore it unless water is already inside your home",
+
+        "Follow the instructions and move to a safe place if advised",
+
+        "Go outside to watch the flood"
+      ],
+
+      answer: 1
+    },
+
+
+    {
+      question:
+        "What is the safest thing to do if you encounter a flooded road?",
+
+      choices: [
+        "Walk or drive through if the water looks shallow",
+
+        "Wait in the road for the water to go down",
+
+        "Turn around and find a safer route"
+      ],
+
+      answer: 2
+    },
+
+
+    {
+      question:
+        "Where should you go if your area is flooding?",
+
+      choices: [
+        "To higher ground or a designated evacuation shelter",
+
+        "Into a basement",
+
+        "Under a bridge"
+      ],
+
+      answer: 0
+    },
+
+
+    {
+      question:
+        "What is useful to include in an emergency kit?",
+
+      choices: [
+        "Only clothing",
+
+        "Drinking water, food, a flashlight, and essential medicines",
+
+        "Heavy furniture"
+      ],
+
+      answer: 1
+    },
+
+
+    {
+      question:
+        "What should you do before floodwater reaches your home, if there is time?",
+
+      choices: [
+        "Follow local safety guidance and move important items to a higher level",
+
+        "Touch electrical equipment to check if it is working",
+
+        "Stay near the river to monitor the water"
+      ],
+
+      answer: 0
+    }
+
+  ];
+
+
+  /* QUIZ VARIABLES */
+
+  let currentQuestion = 0;
+
+  let score = 45;
+
+  let answered = false;
+
+
+  /* ELEMENTS */
+
+  const questionText =
+    document.getElementById("questionText");
+
+  const choices =
+    document.getElementById("choices");
+
+  const feedback =
+    document.getElementById("feedback");
+
+  const progressBar =
+    document.getElementById("myBar");
+
+  const progress =
+    progressBar.parentElement;
+
+  const submitBtn =
+    document.getElementById("submitBtn");
+
+  const nextBtn =
+    document.getElementById("nextBtn");
+
+  const quizArea =
+    document.getElementById("quizArea");
+
+
+  /* UPDATE PROGRESS */
+
+  function updateProgress() {
+
+    score =
+      Math.max(
+        0,
+        Math.min(100, score)
+      );
+
+    progressBar.style.width =
+      score + "%";
+
+    progressBar.textContent =
+      score + "%";
+
+    progress.setAttribute(
+      "aria-valuenow",
+      score
+    );
+
+  }
+
+
+  /* =========================
+     SHOW QUESTION
+     ========================= */
+
+  function showQuestion() {
+
+    answered = false;
+
+    feedback.textContent = "";
+
+    submitBtn.hidden = false;
+
+    nextBtn.hidden = true;
+
+
+    const item =
+      questions[currentQuestion];
+
+
+    questionText.textContent =
+      `Question ${currentQuestion + 1} of ${questions.length}: ${item.question}`;
+
+
+    choices.innerHTML =
+      item.choices.map(
+        (choice, index) => `
+
+          <div class="form-check">
+
+            <input
+              class="form-check-input"
+              type="radio"
+              name="quizAnswer"
+              id="choice${index}"
+              value="${index}"
+            >
+
+            <label
+              class="form-check-label"
+              for="choice${index}"
+            >
+              ${choice}
+            </label>
+
+          </div>
+
+        `
+      ).join("");
+
+  }
+
+
+  /* CHECK ANSWER */
+
+  submitBtn.addEventListener(
+    "click",
+    () => {
+
+      if (answered) return;
+
+
+      const selected =
+        document.querySelector(
+          'input[name="quizAnswer"]:checked'
+        );
+
+
+      if (!selected) {
+
+        feedback.textContent =
+          "Please choose an answer first.";
+
+        return;
+
+      }
+
+
+      answered = true;
+
+
+      const correct =
+        Number(selected.value) ===
+        questions[currentQuestion].answer;
+
+
+      if (correct) {
+
+        score += 10;
+
+        feedback.textContent =
+          "Correct! 10% added to your progress.";
+
+        feedback.style.color =
+          "#9be7b2";
+
+      }
+
+      else {
+
+        score -= 10;
+
+        feedback.textContent =
+          "That answer is incorrect. 10% deducted from your progress.";
+
+        feedback.style.color =
+          "#ffb4b4";
+
+      }
+
+
+      updateProgress();
+
+
+      document
+        .querySelectorAll(
+          'input[name="quizAnswer"]'
+        )
+        .forEach(
+          input => {
+            input.disabled = true;
+          }
+        );
+
+
+      submitBtn.hidden = true;
+
+      nextBtn.hidden = false;
+
+
+      nextBtn.textContent =
+        currentQuestion === questions.length - 1
+          ? "See Results"
+          : "Next Question";
+
+    }
+  );
+
+
+  /* NEXT QUESTION */
+
+  nextBtn.addEventListener(
+    "click",
+    () => {
+
+      currentQuestion++;
+
+
+      if (
+        currentQuestion <
+        questions.length
+      ) {
+
+        showQuestion();
+
+      }
+
+      else {
+
+        quizArea.classList.add(
+          "quiz-complete"
+        );
+
+
+        questionText.textContent =
+          "Quiz complete!";
+
+
+        choices.innerHTML = "";
+
+
+        feedback.textContent =
+          `Your final progress score is ${score}%.`;
+
+
+        feedback.style.color =
+          "#cfe0ff";
+
+
+        submitBtn.hidden = true;
+
+        nextBtn.hidden = true;
+
+      }
+
+    }
+  );
+
+
+  /* START QUIZ */
+
+  showQuestion();
+
+
+  /* MOBILE NAVBAR */
+
+  (function () {
+
+    var nav =
+      document.getElementById("menu");
+
+    if (!nav) return;
+
+
+    var bsCollapse =
+      new bootstrap.Collapse(
+        nav,
+        {
+          toggle: false
+        }
+      );
+
+
+    document
+      .querySelectorAll(
+        ".navbar-nav .nav-link:not(.dropdown-toggle)"
+      )
+      .forEach(
+        function (link) {
+
+          link.addEventListener(
+            "click",
+            function () {
+
+              var toggler =
+                document.querySelector(
+                  ".navbar-toggler"
+                );
+
+
+              if (
+                toggler &&
+                window.getComputedStyle(
+                  toggler
+                ).display !== "none"
+              ) {
+
+                bsCollapse.hide();
+
+              }
+
+            }
+          );
+
+        }
+      );
+
+  })();
+
+</script>
+
+</body>
+</html>

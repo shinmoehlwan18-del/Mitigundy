@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MITIGUDY | Donate</title>
+
+  <link rel="icon" type="image/png" href="image/logo.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="donate.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <a href="index.html" class="navbar-brand">
+      <img src="image/logo.png" class="rounded-circle" alt="MITIGUDY Logo">
+      MITIGUDY
+    </a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#menu"
+      aria-controls="menu" aria-expanded="false"
+      aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="articles.html"
+            role="button" data-bs-toggle="dropdown">
+            Articles
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="article1.html">Flood safety</a></li>
+            <li><a class="dropdown-item" href="article2.html">Community stories</a></li>
+            <li><a class="dropdown-item" href="article3.html">Prevention tips</a></li>
+            <li><a class="dropdown-item" href="articles.html">All Articles</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="Aboutus.html" class="nav-link">About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="issue_and_solution.html" class="nav-link">Issues &amp; Solutions</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="donate_page.html" class="nav-link active">Donate</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="quiz.html" class="nav-link">Quiz</a>
+        </li>
+
+      </ul>
+
+      <form class="d-flex" role="search" action="search" method="get">
+
+        <input type="search" class="form-control me-2"
+          name="search" placeholder="Search" aria-label="Search">
+
+        <button type="submit" class="btn btn-outline-light">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- DONATION SECTION -->
+
+<div class="container-fluid donation-section">
+
+  <div class="row min-vh-100">
+
+    <!-- LEFT IMAGE -->
+
+    <aside class="col-md-5 payment-sidebar">
+
+      <img src="image/donate1.jpg"
+        class="payment-image"
+        alt="Donation and community support">
+
+      <div class="image-overlay">
+
+        <h1>Help Build Safer Communities</h1>
+
+        <p>
+          Every contribution represents a step towards
+          better flood awareness, preparedness and
+          protection for communities across Myanmar.
+        </p>
+
+      </div>
+
+    </aside>
+
+
+    <!-- RIGHT DONATION FORM -->
+
+    <main class="col-md-7 donation-main">
+
+      <form class="donation-form" id="donationForm"
+        onsubmit="return submitDonation()">
+
+        <span class="donation-label">SUPPORT OUR MISSION</span>
+
+        <h2>Make a Difference</h2>
+
+        <p class="donation-description">
+          Your support can help promote flood awareness
+          and encourage safer communities in Myanmar.
+        </p>
+
+
+        <!-- DONATION AMOUNT -->
+
+        <div class="form-section">
+
+          <h5>1. Choose your donation amount</h5>
+
+          <p class="section-description">
+            Select an amount in Myanmar Kyat (MMK).
+          </p>
+
+          <div class="amount-options">
+
+            <button type="button" class="amount-btn"
+              onclick="selectAmount(5000, this)">
+              5,000 Ks
+            </button>
+
+            <button type="button" class="amount-btn"
+              onclick="selectAmount(10000, this)">
+              10,000 Ks
+            </button>
+
+            <button type="button" class="amount-btn"
+              onclick="selectAmount(20000, this)">
+              20,000 Ks
+            </button>
+
+            <button type="button" class="amount-btn"
+              onclick="selectAmount(50000, this)">
+              50,000 Ks
+            </button>
+
+          </div>
+
+          <label for="customAmount" class="form-label mt-3">
+            Or enter a custom amount
+          </label>
+
+          <div class="input-group">
+
+            <input type="number" id="customAmount"
+              class="form-control" min="1"
+              placeholder="Enter amount"
+              oninput="clearAmountSelection()">
+
+            <span class="input-group-text">MMK</span>
+
+          </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <div class="form-section">
+
+          <h5>2. Your information</h5>
+
+          <div class="mb-3">
+
+            <label for="donorName" class="form-label">
+              Full name
+            </label>
+
+            <input type="text" id="donorName"
+              class="form-control"
+              placeholder="Enter your name">
+
+          </div>
+
+          <div class="mb-3">
+
+            <label for="email" class="form-label">
+              Email address
+            </label>
+
+            <input type="email" id="email"
+              class="form-control"
+              placeholder="email@example.com">
+
+          </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- PAYMENT METHODS -->
+
+        <div class="form-section">
+
+          <h5>3. Choose your payment method</h5>
+
+          <p class="section-description">
+            Select your preferred Myanmar payment method.
+          </p>
+
+          <div class="payment-methods">
+
+            <!-- KBZ PAY -->
+
+            <button type="button" class="payment-option"
+              onclick="selectPayment('KBZPay', this)">
+
+              <img src="image/kbzpay.png"
+                class="payment-logo" alt="KBZ Pay logo">
+
+              <span class="payment-name">KBZPay</span>
+
+              <i class="bi bi-check-circle-fill check-icon"></i>
+
+            </button>
+
+
+            <!-- WAVE PAY -->
+
+            <button type="button" class="payment-option"
+              onclick="selectPayment('WavePay', this)">
+
+              <img src="image/wavepay.png"
+                class="payment-logo" alt="Wave Pay logo">
+
+              <span class="payment-name">WavePay</span>
+
+              <i class="bi bi-check-circle-fill check-icon"></i>
+
+            </button>
+
+
+            <!-- AYA PAY -->
+
+            <button type="button" class="payment-option"
+              onclick="selectPayment('AYA Pay', this)">
+
+              <img src="image/ayapay.png"
+                class="payment-logo" alt="AYA Pay logo">
+
+              <span class="payment-name">AYA Pay</span>
+
+              <i class="bi bi-check-circle-fill check-icon"></i>
+
+            </button>
+
+
+            <!-- CB PAY -->
+
+            <button type="button" class="payment-option"
+              onclick="selectPayment('CB Pay', this)">
+
+              <img src="image/cbpay.png"
+                class="payment-logo" alt="CB Pay logo">
+
+              <span class="payment-name">CB Pay</span>
+
+              <i class="bi bi-check-circle-fill check-icon"></i>
+
+            </button>
+
+
+            <!-- MMQR -->
+
+            <button type="button" class="payment-option mmqr-option"
+              onclick="selectPayment('MMQR', this)">
+
+              <img src="image/mmqr.png"
+                class="payment-logo" alt="MMQR logo">
+
+              <span class="payment-name">MMQR</span>
+
+              <i class="bi bi-check-circle-fill check-icon"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUBMIT BUTTON -->
+
+        <button type="submit" class="btn donate-button w-100">
+
+          <i class="bi bi-heart-fill me-2"></i>
+          Continue
+
+        </button>
+
+
+        <!-- CONFIRMATION MESSAGE -->
+
+        <div id="confirmationMessage"
+          class="confirmation-message"
+          role="status" aria-live="polite">
+        </div>
+
+      </form>
+
+    </main>
+
+  </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer-green">
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- LOGO AND DESCRIPTION -->
+
+      <div class="col-lg-3 mb-4">
+
+        <div class="footer-logo">MITI<br>GUNDY</div>
+
+        <p class="fw-bold text-light mt-3 mb-4">
+
+          "Understanding flood risks is the first step
+          towards safety. By preparing early, following
+          reliable warnings, and helping one another,
+          we can protect lives and build safer communities
+          across Myanmar."
+
+        </p>
+
+        <div class="d-flex gap-2 socials">
+
+          <a href="#" class="social-box">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="#" class="social-box">
+            <i class="bi bi-telegram"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
+
+      <div class="col-lg-2 mb-4">
+
+        <span class="footer-header">Quick Links</span>
+
+        <ul class="list-unstyled footer-nav">
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="issue_and_solution.html">The Issue</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- REFERENCES -->
+
+      <div class="col-lg-3 mb-4">
+
+        <span class="footer-header">References</span>
+
+        <ul class="list-unstyled footer-nav">
+
+          <li>
+            <a href="https://www.moezala.gov.mm/">
+              Department of Meteorology and Hydrology
+            </a>
+          </li>
+
+          <li>
+            <a href="https://themimu.info/">
+              Myanmar Information Management Unit
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.ifrc.org/">
+              International Federation of Red Cross
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.undrr.org/">
+              UN Office for Disaster Risk Reduction
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ABOUT -->
+
+      <div class="col-lg-1 mb-4">
+
+        <span class="footer-header">About</span>
+
+        <ul class="list-unstyled footer-nav">
+
+          <li><a href="Aboutus.html">About us</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="col-lg-3 mb-4">
+
+        <span class="footer-header">Get in Touch</span>
+
+        <ul class="list-unstyled footer-nav fw-bold">
+
+          <li>
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            No.47, Aung Chanthar street, Kamaryut Township,
+            Yangon, Myanmar
+          </li>
+
+          <li>
+            <i class="bi bi-telephone-fill me-2"></i>
+            (+95) 987654321
+          </li>
+
+          <li>
+            <i class="bi bi-envelope-fill me-2"></i>
+            sushwesinhtet.envo@gmail.com
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="copyright-bar text-center">
+
+      MITIGUDY © 2026. All rights reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- SIMPLE YEAR 9 JAVASCRIPT -->
+
+<script>
+
+// VARIABLES
+
+var selectedAmount = 0;
+var selectedPayment = "";
+
+
+// 1. SELECT DONATION AMOUNT
+
+function selectAmount(amount, button) {
+
+  selectedAmount = amount;
+
+  var buttons = document.getElementsByClassName("amount-btn");
+
+  // Remove previous selection
+
+  for (var i = 0; i < buttons.length; i++) {
+
+    buttons[i].className = "amount-btn";
+
+  }
+
+  // Highlight selected button
+
+  button.className = "amount-btn selected";
+
+  // Clear custom amount
+
+  document.getElementById("customAmount").value = "";
+
+}
+
+
+// 2. CUSTOM DONATION AMOUNT
+
+function clearAmountSelection() {
+
+  var buttons = document.getElementsByClassName("amount-btn");
+
+  for (var i = 0; i < buttons.length; i++) {
+
+    buttons[i].className = "amount-btn";
+
+  }
+
+  selectedAmount = 0;
+
+}
+
+
+// 3. SELECT PAYMENT METHOD
+
+function selectPayment(method, button) {
+
+  selectedPayment = method;
+
+  var options = document.getElementsByClassName("payment-option");
+
+  // Remove previous selection
+
+  for (var i = 0; i < options.length; i++) {
+
+    if (i == 4) {
+
+      options[i].className = "payment-option mmqr-option";
+
+    } else {
+
+      options[i].className = "payment-option";
+
+    }
+
+  }
+
+  // Highlight selected payment
+
+  button.className = button.className + " selected";
+
+}
+
+
+// 4. SUBMIT DONATION FORM
+
+function submitDonation() {
+
+  var name = document.getElementById("donorName").value;
+
+  var customAmount = document.getElementById("customAmount").value;
+
+  var amount = selectedAmount;
+
+  var confirmationMessage =
+    document.getElementById("confirmationMessage");
+
+
+  // Check custom amount
+
+  if (customAmount != "") {
+
+    amount = parseInt(customAmount);
+
+  }
+
+
+  // Check donation amount
+
+  if (amount <= 0 || isNaN(amount)) {
+
+    alert("Please select or enter a donation amount.");
+
+    return false;
+
+  }
+
+
+  // Check payment method
+
+  if (selectedPayment == "") {
+
+    alert("Please select a payment method.");
+
+    return false;
+
+  }
+
+
+  // Check donor name
+
+  if (name == "") {
+
+    name = "supporter";
+
+  }
+
+
+  // Display confirmation message
+
+  confirmationMessage.textContent =
+    "Donation details submitted! Thank you " + name +
+    "! Your selected donation is " + amount +
+    " MMK using " + selectedPayment + ".";
+
+  confirmationMessage.style.display = "block";
+
+
+  return false;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MITIGUDY</title>
+  <link rel="icon" type="image/png" href="image/logo.png">
+ 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+ 
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="image/logo.png" class="rounded-circle" alt="MITIGUDY Logo">
+        MITIGUDY
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="articles.html" id="articlesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Articles</a>
+            <ul class="dropdown-menu" aria-labelledby="articlesDropdown">
+              <li><a class="dropdown-item" href="article1.html">Flood safety</a></li>
+              <li><a class="dropdown-item" href="article1.html">Community stories</a></li>
+              <li><a class="dropdown-item" href="article2.html">Prevention Tips</a></li>
+              <li><a class="dropdown-item" href="articles.html">All Articles</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item"><a href="Aboutus.html" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="issue_and_solution.html" class="nav-link">Issues &amp; Solutions</a></li>
+          <li class="nav-item"><a href="donate_page.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+        </ul>
+  
+        <form class="d-flex" role="search" action="#" method="get">
+          <input type="search" class="form-control me-2" name="search" placeholder="Search" aria-label="Search">
+          <button type="submit" class="btn btn-outline-primary">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <header class="position-relative text-white text-center" style="background: url('image/indexhero.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1 class="fw-bold mb-3">Floods in Myanmar</h1>
+      <p class="mb-4" style="max-width:820px;">Discover the impact of floods on communities across Myanmar and learn practical steps families and communities can take to stay safe, recover faster, and build resilience.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a class="btn btn-primary btn-lg px-4 py-2 rounded-3 fw-bold" id="buttons" href="issue_and_solution.html">Issues & Solutions</a>
+        <a class="btn btn-outline-light btn-lg px-4 py-2 rounded-3" id="buttons" href="donate_page.html" style="background: rgba(255,255,255,0.04);">Donate</a>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- Slogan -->
+  <section class="slogan-sec">
+    <div class="container">
+      <div class="text-center">
+        <p class="fw-bold" style="font-size: clamp(1.05rem, 2.2vw, 1.45rem);"><i>"We can't stop the rain, but we can stop the flooding."</i></p>
+        <p class="fs-5 mt-2" style="color:var(--muted);">Don't wait — learn, prepare, and protect.</p>
+        <div class="mt-4">
+          <a href="Aboutus.html" id="buttons" class="join-btn">Join Us Today <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <!--<section class="intro-section mt-5">
+      <div class="container">
+          <div class="row align-items-center g-5">
+
+              <div class="col-lg-6">
+                  <span class="section-label">ABOUT OUR WEBSITE</span>
+
+                  <h2 class="intro-title">
+                      Learn Today, Stay Safe Tomorrow
+                  </h2>
+
+                  <p>
+                      Welcome to MITIGUDY, a flood safety awareness
+                      educational website designed to provide useful
+                      knowledge about floods in Myanmar.
+                  </p>
+
+                  <p>
+                      Our website helps visitors understand the causes
+                      and impacts of flooding, discover practical
+                      prevention methods, and learn how to stay safe
+                      before, during, and after a flood.
+                  </p>
+
+                  <p>
+                      Through educational articles, awareness posters,
+                      and reliable information, we hope to encourage
+                      everyone to become more prepared and build
+                      safer, flood-resilient communities.
+                  </p>
+
+                  <a href="Aboutus.html" id="buttons" class="btn btn-primary btn-lg">
+                    Discover More
+                    <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+              </div>
+
+              <div class="col-lg-6">
+                  <img src="image/intro.jpg"
+                      alt="Introduction"
+                      class="intro-img">
+              </div>
+
+          </div>
+      </div>
+  </section>-->
+
+  <!--Cards for flood info-->
+  <section class="container my-5">
+      <div class="container mt-5">
+          <div class="row justify-content-center">
+
+              <!-- Yangon -->
+              <div class="col-lg-4 col-md-4 mb-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-easing="ease-in" data-aos-delay="300">
+                      <div class="card-header">
+                          Flood in Yangon
+                      </div>
+                      <div class="card-body">
+                          <img src="/image/images.jpeg" alt="Flood in Yangon" class="card-img-top">
+                          <h3 class="card-title">Exploring the Yangon flood</h3>
+                          <p class="card-text">
+                              Flooding in Yangon often occurs during the monsoon season due to heavy rainfall and poor drainage systems. It can damage homes, roads, and businesses while disrupting people's daily lives.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Thaketa -->
+              <div class="col-lg-4 col-md-4 mb-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-easing="ease-in" data-aos-delay="300">
+                      <div class="card-header">
+                          Flood in Thaketa
+                      </div>
+                      <div class="card-body">
+                          <img src="/image/images5.jpeg" alt="Flood in Thaketa" class="card-img-top">
+                          <h3 class="card-title">Exploring the Thaketa flood</h3>
+                          <p class="card-text">
+                              Thaketa Township is particularly vulnerable to flooding because it is located between Pazundaung Creek and the Bago River. During the rainy season, heavy rainfall, rising water levels, and clogged drainage systems can cause frequent flooding, affecting homes and daily activities.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Hlaing Tharyar -->
+              <div class="col-lg-4 col-md-4 mb-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-easing="ease-in" data-aos-delay="300">
+                      <div class="card-header">
+                          Flood in Hlaing Tharyar
+                      </div>
+                      <div class="card-body">
+                          <img src="/image/images2.jpeg" alt="Flood in Hlaing Tharyar" class="card-img-top">
+                          <h3 class="card-title">Exploring the Hlaing Tharyar flood</h3>
+                          <p class="card-text">
+                              Hlaing Tharyar Township experiences flooding during periods of heavy monsoon rainfall. Low-lying neighbourhoods are especially vulnerable, as floodwater can enter homes, disrupt transportation, and affect residents' livelihoods.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+
+  <!-- Solutions and Awareness -->
+  <section class="awareness-section">
+      <div class="container">
+
+          <div class="text-center mb-5">
+              <span class="section-label">TAKE ACTION</span>
+              <h2 class="heading">Solutions & Awareness</h2>
+              <p class="awareness-subtitle">
+                  Small actions can make a big difference.
+                  Learn how we can work together to reduce flood risks.
+              </p>
+          </div>
+
+          <div class="row align-items-center g-4">
+
+              <div class="col-lg-6">
+                  <img id="awarenessposter" src="image/mitigundyposter.jpeg"
+                      alt="MITIGUDY flood awareness poster"
+                      class="awareness-img">
+              </div>
+
+              <div class="col-lg-6">
+                  <h3>Spread Awareness, Save Lives</h3>
+
+                  <p>
+                      Raising awareness is an important step towards
+                      building safer communities. Our educational posters
+                      share useful information about flood prevention,
+                      preparation, and safety measures.
+                  </p>
+
+                  <ul class="awareness-list">
+                      <li>Understand the causes of flooding.</li>
+                      <li>Learn how to prepare before disasters.</li>
+                      <li>Follow reliable weather and flood warnings.</li>
+                      <li>Keep drainage systems clean.</li>
+                      <li>Share flood safety information with others.</li>
+                  </ul>
+
+                  <a href="issue_and_solution.html" id="buttons" class="btn btn-primary btn-lg">
+                      Explore Solutions
+                      <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  
+  <!-- Flood Safety Essentials -->
+  <section class="safety-section">
+      <div class="container">
+
+          <div class="text-center mb-5">
+              <span class="section-label">STAY PREPARED</span>
+              <h2 class="heading">Flood Safety Essentials</h2>
+              <p class="awareness-subtitle">
+                  Knowing what to do before, during, and after a flood
+                  can help protect lives and reduce damage.
+              </p>
+          </div>
+
+          <div class="row g-4">
+
+              <!-- Before Flood -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="safety-card h-100">
+
+                      <div class="safety-icon">
+                          <i class="bi bi-calendar-check-fill"></i>
+                      </div>
+
+                      <h3>Before a Flood</h3>
+
+                      <p>
+                          Preparation is essential to keeping yourself
+                          and your family safe.
+                      </p>
+
+                      <ul>
+                          <li>Check weather forecasts and flood warnings.</li>
+                          <li>Prepare an emergency bag.</li>
+                          <li>Identify safe evacuation routes.</li>
+                          <li>Keep important documents protected.</li>
+                          <li>Clean drains and avoid blocking waterways.</li>
+                      </ul>
+
+                  </div>
+              </div>
+
+              <!-- During Flood -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="safety-card h-100">
+
+                      <div class="safety-icon">
+                          <i class="bi bi-water"></i>
+                      </div>
+
+                      <h3>During a Flood</h3>
+
+                      <p>
+                          Staying alert and following safety instructions
+                          can help prevent dangerous situations.
+                      </p>
+
+                      <ul>
+                          <li>Move to higher ground when advised.</li>
+                          <li>Follow official emergency instructions.</li>
+                          <li>Avoid walking or driving through floodwater.</li>
+                          <li>Stay away from electrical equipment in wet areas.</li>
+                          <li>Keep in contact with family members.</li>
+                      </ul>
+
+                  </div>
+              </div>
+
+              <!-- After Flood -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="safety-card h-100">
+
+                      <div class="safety-icon">
+                          <i class="bi bi-house-check-fill"></i>
+                      </div>
+
+                      <h3>After a Flood</h3>
+
+                      <p>
+                          Recovery requires caution to protect your
+                          health and ensure your surroundings are safe.
+                      </p>
+
+                      <ul>
+                          <li>Return home only when authorities say it is safe.</li>
+                          <li>Avoid damaged buildings and power lines.</li>
+                          <li>Drink clean and safe water.</li>
+                          <li>Clean and disinfect affected areas safely.</li>
+                          <li>Report damage and seek assistance if needed.</li>
+                      </ul>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+ 
+  <!-- FAQ -->
+  <section class="container py-5">
+    <div class="row align-items-start">
+      <div class="col-lg-8">
+        <h2 class="faq-title">FAQ</h2>
+        <p class="faq-subtitle">Common questions about floods and how to reduce their impacts in Myanmar</p>
+ 
+        <div class="accordion rounded-2 custom-faq" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What is the goal of MITIGUDY?</button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Our goal is to design an engaging digital platform that raises awareness about minimizing unnecessary resource use and promotes resilient, sustainable living in flood-prone communities.</div>
+            </div>
+          </div>
+ 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How can we reduce flood risk before a disaster happens?</button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Flood risk can be reduced before a disaster happens by preparing communities, improving drainage, protecting natural environments, and helping people understand flood warnings. For your Year 9 disaster PBL, you can focus on realistic actions that students can take to educate people in Myanmar.</div>
+            </div>
+          </div>
+ 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is living near floods dangerous for people and wildlife?</button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">living in flood-prone areas can be dangerous for people, and living near wildfire-prone areas can also be dangerous. However, the risks are different for each disaster.</div>
+            </div>
+          </div>
+ 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">What are some easy ways to reduce flood impact?</button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               We can reduce flood risk by cleaning drains, planting trees, protecting wetlands, improving drainage systems, educating communities about flood safety, following official flood warnings, preparing emergency kits and evacuation plans, and avoiding construction in high-risk flood areas.
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Donate -->
+  <section id="donate-section" class="py-5 text-center" style="border-top:1px solid rgba(255,255,255,0.02);">
+    <div class="container">
+      <h3 style="color:#f6fbff;">Support flood relief & preparedness</h3>
+      <p style="max-width:800px; margin:.6rem auto 1rem;">Your donations help provide emergency kits, community training, and recovery support for affected families.</p>
+      <a href="donate_page.html" id="buttons" class="btn btn-primary px-4 py-2">Donate Now</a>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="footer-green">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-3 mb-5">
+            <div class="footer-logo mb-3">MITI<br>GUNDY</div>
+            <p class="fw-bold text-light mb-4">
+            “Understanding flood risks is the first step towards safety. By preparing early, following reliable warnings, and helping one another, we can protect lives and build safer communities across Myanmar.”
+            </p>
+            <div class="d-flex gap-2 socials">
+            <a href="#" class="social-box"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-box"><i class="bi bi-telegram"></i></a>
+            </div>
+        </div>
+    
+        <div class="col-lg-2 mb-5 col-md-12">
+            <span class="footer-header">Quick Links</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="issue_and_solution.html">The Issue</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 mb-5 col-md-12">
+            <span class="footer-header">References</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="https://www.moezala.gov.mm/">Department of Meteorology and Hydrology</a></li>
+            <li><a href="https://themimu.info/">Myanmar Information Management Unit</a></li>
+            <li><a href="https://www.ifrc.org/">International Federation of Red Cross</a></li>
+            <li><a href="https://www.undrr.org/">UN Office for Disaster Risk Reduction</a></li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-1 mb-5 col-md-12">
+            <span class="footer-header">About</span>
+            <ul class="list-unstyled footer-nav">
+            <li><a href="Aboutus.html">About us</a></li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-3 mb-5 col-md-12">
+            <span class="footer-header">Get in Touch</span>
+            <ul class="list-unstyled footer-nav fw-bold">
+            <li><i class="bi bi-geo-alt-fill me-2 contact-icon"></i> No.47, Aung Chanthar street, Kamaryut Township, Yangon, Myanmar</li>
+            <li><i class="bi bi-telephone-fill me-2 contact-icon"></i>(+95) 987654321</li>
+            <li><i class="bi bi-envelope-fill me-2 contact-icon"></i>sushwesinhtet.envo@gmail.com</li>
+            </ul>
+        </div>
+        </div>
+    
+        <div class="row copyright-bar text-center d-flex justify-content-center">
+        <div class="col-md-6">MITIGUDY © 2026. All rights reserved.</div>
+        </div>
+    </div>
+    </footer>
+ 
+  <!-- Bootstrap JS bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <script>
+    // 1) Close mobile navbar when a nav link is clicked (nice UX)
+    
+    (function () {
+      var nav = document.getElementById('menu');
+      if (!nav) return;
+
+      var bsCollapse = new bootstrap.Collapse(nav, {
+        toggle: false
+      });
+
+      // Close the mobile navbar only when a normal link is clicked.
+      // Do NOT close it when the dropdown toggle is clicked.
+      document.querySelectorAll(
+        '.navbar-nav .nav-link:not(.dropdown-toggle)'
+      ).forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (
+            window.getComputedStyle(
+              document.querySelector('.navbar-toggler')
+            ).display !== 'none'
+          ) {
+            bsCollapse.hide();
+          }
+        });
+      });
+    })();
+
+ 
+    // 2) Add small animation classes to accordion panels using Bootstrap events
+    (function() {
+      var accordion = document.getElementById('faqAccordion');
+      if (!accordion) return;
+ 
+      accordion.addEventListener('show.bs.collapse', function (evt) {
+        // ensure the opening panel has smooth opacity transition (CSS handles it)
+        evt.target.classList.remove('collapsing-hidden');
+      });
+ 
+      accordion.addEventListener('hide.bs.collapse', function (evt) {
+        // no-op, CSS handles collapse animation
+      });
+    })();
+  </script>
+</body>
+</html>
+ 

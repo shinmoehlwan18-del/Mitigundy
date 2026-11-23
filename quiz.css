@@ -1,0 +1,659 @@
+/* =========================
+       COLOR VARIABLES
+       ========================= */
+
+    :root {
+      --primary-blue: #0b3d91;
+      --accent: #173f66;
+      --surface: #2f3942;
+      --muted: #6e7780;
+      --glass: rgba(255,255,255,0.04);
+
+      --footer-bg:
+        linear-gradient(
+          180deg,
+          rgba(8,26,50,0.95),
+          rgba(11,33,64,0.98)
+        );
+    }
+
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          #0c243f 0%,
+          #192b3d 100%
+        );
+
+      color: #e9eef6;
+
+      font-family:
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: #a9c6ff;
+    }
+
+
+    /* =========================
+       NAVBAR
+       ========================= */
+
+    .navbar {
+      background:
+        linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent)
+        );
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.1);
+
+      padding: 12px 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #fff;
+
+      font-weight: 700;
+      letter-spacing: .6px;
+
+      text-decoration: none;
+    }
+
+    .navbar-brand:hover {
+      color: #fff;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+
+      object-fit: cover;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.95) !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #cbe1ff !important;
+    }
+
+
+    /* Mobile navbar button */
+
+    .navbar-toggler {
+      border-color:
+        rgba(255,255,255,0.2);
+    }
+
+    .navbar-toggler:focus {
+      box-shadow:
+        0 0 0 .15rem rgba(255,255,255,0.1);
+    }
+
+    .navbar-toggler-icon {
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 22px;
+    }
+
+
+    /* =========================
+       DROPDOWN
+       ========================= */
+
+    .dropdown-menu {
+      background-color: #173f66;
+      border-color:
+        rgba(255,255,255,0.12);
+    }
+
+    .dropdown-item {
+      color: #e9eef6;
+    }
+
+    .dropdown-item:hover {
+      background-color: #0b3d91;
+      color: #fff;
+    }
+
+
+    /* =========================
+       SEARCH
+       ========================= */
+
+    .navbar .form-control {
+      background:
+        rgba(255,255,255,0.95);
+
+      border: none;
+      border-radius: 6px;
+    }
+
+    .navbar .form-control:focus {
+      box-shadow:
+        0 0 0 .2rem rgba(169,198,255,0.25);
+    }
+
+    .btn-outline-primary {
+      color: #cfe0ff;
+      border-color:
+        rgba(255,255,255,0.35);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #fff;
+      color: #0b3d91;
+      border-color: #fff;
+    }
+
+
+    /* =========================
+       QUIZ BACKGROUND
+       ========================= */
+
+    .quiz-container {
+      min-height: 70vh;
+
+      padding:
+        55px 0 75px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #0c243f 0%,
+          #192b3d 100%
+        );
+    }
+
+
+    /* =========================
+       QUIZ TITLE
+       ========================= */
+
+    .quiz-container h2 {
+      color: #f7fbff;
+
+      font-weight: 800;
+
+      text-align: center;
+
+      margin-bottom: 30px;
+
+      font-size: 2.2rem;
+
+      letter-spacing: -0.4px;
+    }
+
+
+    /* =========================
+       PROGRESS BAR
+       ========================= */
+
+    .progress {
+      max-width: 850px;
+
+      height: 14px;
+
+      margin:
+        0 auto 30px;
+
+      background:
+        rgba(255,255,255,0.12);
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      box-shadow:
+        inset 0 1px 3px rgba(0,0,0,0.25);
+    }
+
+    .progress-bar {
+      background:
+        linear-gradient(
+          90deg,
+          #0b3d91,
+          #173f66
+        );
+
+      color: #fff;
+
+      font-weight: 600;
+
+      font-size: .75rem;
+
+      line-height: 14px;
+
+      transition:
+        width .4s ease;
+    }
+
+
+    /* =========================
+       QUIZ CARD
+       ========================= */
+
+    #quizArea {
+      max-width: 850px;
+
+      margin: 0 auto;
+
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.02)
+        );
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.25);
+    }
+
+
+    /* =========================
+       QUESTION
+       ========================= */
+
+    #questionText {
+      color: #f7fbff;
+
+      font-size: 1.35rem;
+
+      font-weight: 700;
+
+      line-height: 1.5;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       ANSWER CHOICES
+       ========================= */
+
+    #choices {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-bottom: 25px;
+    }
+
+    #choices .form-check {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* Hide normal radio button */
+
+    #choices .form-check-input {
+      position: absolute;
+      opacity: 0;
+    }
+
+
+    /* Answer card */
+
+    #choices .form-check-label {
+      display: block;
+
+      width: 100%;
+
+      padding: 15px 18px;
+
+      border:
+        1px solid rgba(255,255,255,0.12);
+
+      border-radius: 10px;
+
+      background:
+        rgba(255,255,255,0.04);
+
+      color: #e9eef6;
+
+      cursor: pointer;
+
+      transition:
+        all .25s ease;
+    }
+
+
+    /* Hover effect */
+
+    #choices .form-check-label:hover {
+      background:
+        rgba(11,61,145,0.35);
+
+      border-color:
+        rgba(169,198,255,0.5);
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* Selected answer */
+
+    #choices
+    .form-check-input:checked
+    + .form-check-label {
+
+      background:
+        linear-gradient(
+          90deg,
+          #0b3d91,
+          #173f66
+        );
+
+      border-color: #a9c6ff;
+
+      color: #fff;
+
+      box-shadow:
+        0 4px 15px
+        rgba(11,61,145,0.3);
+    }
+
+
+    /* =========================
+       FEEDBACK
+       ========================= */
+
+    #feedback {
+      min-height: 28px;
+
+      color: #cfe0ff;
+
+      font-weight: 600;
+
+      font-size: 1rem;
+    }
+
+
+    /* =========================
+       QUIZ BUTTONS
+       ========================= */
+
+    #submitBtn,
+    #nextBtn {
+
+      border: none;
+
+      padding:
+        11px 22px;
+
+      border-radius: 8px;
+
+      font-weight: 600;
+
+      transition:
+        all .25s ease;
+    }
+
+
+    /* Check answer */
+
+    #submitBtn {
+      background:
+        linear-gradient(
+          180deg,
+          #0b3d91,
+          #173f66
+        );
+
+      color: #fff;
+    }
+
+
+    /* Next question */
+
+    #nextBtn {
+      background: #173f66;
+
+      color: #fff;
+    }
+
+
+    /* Button hover */
+
+    #submitBtn:hover,
+    #nextBtn:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 6px 18px
+        rgba(0,0,0,0.3);
+    }
+
+
+    /* =========================
+       QUIZ RESULT
+       ========================= */
+
+    #quizArea.quiz-complete {
+      text-align: center;
+    }
+
+    #quizArea p {
+      color: #dbe9ff;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footer-green {
+
+      background:
+        var(--footer-bg);
+
+      color:
+        rgba(242,248,255,0.95);
+
+      padding:
+        4.25rem 0 2.5rem;
+
+      margin-top: 0;
+
+      border-top:
+        1px solid rgba(255,255,255,0.03);
+    }
+
+    .footer-logo {
+
+      font-weight: 800;
+
+      font-size: 1.65rem;
+
+      color: #fff;
+
+      letter-spacing: .5px;
+    }
+
+    .footer-header {
+
+      display: block;
+
+      color: #f1f6ff;
+
+      font-weight: 700;
+
+      margin-bottom: .6rem;
+    }
+
+    .footer-nav a {
+
+      color:
+        rgba(226,233,246,0.9);
+
+      text-decoration: none;
+
+      transition:
+        color .2s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #a9c6ff;
+    }
+
+
+    /* Social buttons */
+
+    .socials .social-box {
+
+      display: inline-flex;
+
+      width: 38px;
+      height: 38px;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 8px;
+
+      background:
+        rgba(255,255,255,0.03);
+
+      color: #eaf2ff;
+
+      border:
+        1px solid rgba(255,255,255,0.03);
+
+      text-decoration: none;
+
+      transition:
+        all .25s ease;
+    }
+
+    .socials .social-box:hover {
+
+      background: #0b3d91;
+
+      color: #fff;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* Contact icons */
+
+    .contact-icon {
+      color: #a9c6ff;
+    }
+
+
+    /* Copyright */
+
+    .copyright-bar {
+
+      padding:
+        1.1rem 0 .5rem;
+
+      margin-top: .75rem;
+
+      border-top:
+        1px solid rgba(255,255,255,0.03);
+
+      color:
+        rgba(255,255,255,0.65);
+
+      font-size: .92rem;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 767px) {
+
+      .quiz-container {
+        padding:
+          35px 15px 50px;
+      }
+
+      .quiz-container h2 {
+        font-size: 1.7rem;
+      }
+
+      #quizArea {
+        padding: 25px 20px;
+
+        border-radius: 14px;
+      }
+
+      #questionText {
+        font-size: 1.15rem;
+      }
+
+      #choices .form-check-label {
+        padding:
+          13px 15px;
+
+        font-size: .95rem;
+      }
+
+      .progress {
+        height: 12px;
+      }
+
+      .progress-bar {
+        line-height: 12px;
+        font-size: .7rem;
+      }
+
+      .socials .social-box {
+        width: 36px;
+        height: 36px;
+      }
+    }
